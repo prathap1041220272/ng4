@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>Flight Data</h1>
+  <table class="table table-striped">
+  
+  <thead>
+      <tr>
+        <th>SNo</th>
+        <th>Flight Name</th>
+        <th>Boarding Point</th>
+        <th>Destination Point</th>
+        <th>Departure Time</th>
+        <th>Arrival Time</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let flightDt of flight; let i = index " [ngClass]=' table-striped'>
+      <tr>
+        <td>{{ i + 1 }}</td>
+        <td>{{flightDt.name}}</td>
+        <td>{{flightDt.bordingPoint}}</td>
+        <td>{{flightDt.destinationPoint}}</td>
+        <td>{{flightDt.departureTime}}</td>
+        <td>{{flightDt.arrivalTime}}</td>
+      </tr>
+    </tbody>
+</table>
+</div>
