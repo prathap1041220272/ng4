@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-flight-list',
+  templateUrl: './flight-list.component.html',
+  styleUrls: ['./flight-list.component.css']
 })
-export class AppComponent {
+export class FlightListComponent implements OnInit {
+	  public show:boolean = false;
+  public buttonName:any = 'Show';
+
  flight = [
 {
 "name": "Jet Airways",
@@ -85,4 +88,18 @@ export class AppComponent {
 "arrivalTime": "2018-04-11T02:58:13.768Z"
 }
 ];
+  constructor() { }
+
+  ngOnInit () {  }
+
+  toggle() {
+    this.show = !this.show;
+
+    // CHANGE THE NAME OF THE BUTTON.
+    if(this.show)  
+      this.buttonName = "Hide";
+    else
+      this.buttonName = "Show";
+  }
+
 }
