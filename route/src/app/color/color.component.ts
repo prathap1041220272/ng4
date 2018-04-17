@@ -22,15 +22,15 @@ public color2 = '';
 	this.color='blue'
 }
   onClick1(){
-	if (this.color==='red') {
-		this.color=null;
+	if (this.color1==='red') {
+		this.color1=null;
 		return
 	}
 	this.color1='red'
 }
   onClick2(){
-	if (this.color==='green') {
-		this.color=null;
+	if (this.color2==='green') {
+		this.color2=null;
 		return
 	}
 	this.color2='green'

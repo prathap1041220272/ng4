@@ -1,0 +1,9 @@
+
+  <input type="text" #textbox [(ngModel)]='nam' >
+  
+    <button type="button" class="btn" (click)='submit(textbox.value)'>submit</button>
+
+
+<h2><button class="btn" (click)="log=''">Clear</button></h2>
+        <h1><pre>{{log}}</pre></h1>
+

@@ -1,0 +1,27 @@
+<h1>{{title}}</h1>
+<form #userForm="ngForm" (ngSubmit)='form(userForm)'>
+  <label for="email">Email</label>
+  <input type="text" name="email" id="email" ngModel>
+
+  <label for="password">Password</label>
+  <input type="password" name="password" id="password" ngModel>
+
+  <button class="btn" type="submit">Submit</button>
+</form>
+{{users}}
+
+<table class="table">
+	<thead>
+	<tr>
+		<th>@email</th>
+		<th>#password</th>
+	</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				
+			</td>
+		</tr>
+	</tbody>
+</table>

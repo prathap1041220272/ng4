@@ -95,7 +95,6 @@ export class FlightListComponent implements OnInit {
   toggle() {
     this.show = !this.show;
 
-    // CHANGE THE NAME OF THE BUTTON.
     if(this.show)  
       this.buttonName = "Hide";
     else
