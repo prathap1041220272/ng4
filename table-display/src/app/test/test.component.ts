@@ -6,14 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
-  public users;
+  public users[] :[];
+  const title='form data '
   constructor() { 
-    this.users = '';
   }
 
   form(user){
     console.log(user.value);
     this.users = user.value;
+   
   }
 
   ngOnInit() {

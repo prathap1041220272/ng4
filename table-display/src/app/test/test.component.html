@@ -1,16 +1,20 @@
-<h1>{{title}}</h1>
-<form #userForm="ngForm" (ngSubmit)='form(userForm)'>
-  <label for="email">Email</label>
-  <input type="text" name="email" id="email" ngModel>
+<h1 class="row justify-content-md-center">{{title}}</h1>
+<div class="container" style="margin-top: 50px">
+	<div class="row justify-content-md-center">
+<form #userForm="ngForm" (ngSubmit)='form(userForm)' class="col-md-4">
+  <label for="email">Email @</label>
+  <input type="text" class="form-control" name="email" id="email" ngModel>
 
-  <label for="password">Password</label>
-  <input type="password" name="password" id="password" ngModel>
+  <label for="password">Password # </label>
+  <input type="password" class="form-control" name="password" id="password" ngModel>
 
-  <button class="btn" type="submit">Submit</button>
+  <button style="margin-top: 20px" class="btn" type="submit">Submit</button>
 </form>
+</div>
+</div>
 {{users}}
 
-<table class="table">
+<table class="table" style="margin-top: 20px">
 	<thead>
 	<tr>
 		<th>@email</th>
