@@ -24,7 +24,8 @@ app.post('/api/data',(req,res,next)=>{
 })
 
 app.get('/api/data',(req,res,next)=>{
-	user.find() //{email : req.body.email} if we need to get the entire details of the email
+	user.find() 
+	// {email : req.body.email} if we need to get the entire details of the email usin post method
 	.then(data => {
 		res.json(data)
 	})
@@ -47,7 +48,7 @@ app.put('/api/data/:id',(req,res,next)=>{
 
 app.delete('/api/data/:id',(req,res,next)=>{
 	var {id} = req.params;
-	user.remove()
+	user.remove({_id:id})
 	.then(data => {res.json(data)})
 	.catch(err => {res.json(err.message)})
 })
