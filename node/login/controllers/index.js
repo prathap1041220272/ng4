@@ -2,12 +2,13 @@
 const user = require('./user');
 const bodyParser = require('body-parser');
 const { tokenGen } = require('../services');
+// const passport = require('./passport');
 
 function routes(app) {
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(bodyParser.json());
 
-    app.use('/auth', user);
+    // app.use('/auth', [user,passport]);
     app.use('/api/', (req, res, next) => {
         const tokenServ = (req.headers || {}).authorization;
         if (!tokenServ) {
